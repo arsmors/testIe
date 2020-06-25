@@ -51,12 +51,6 @@ public class MainPage {
         baseFunc.getElement(SEARCH_BOX).sendKeys(Keys.RETURN);
     }
 
-    public void searchResults(String search) {
-        String text = "Your search - " + search + " - did not match any documents.";
-        WebElement searchResult = baseFunc.getElement(SEARCH_RESULTS);
-        Assert.assertTrue("Displayed message is not correct", searchResult.getText().contains(text));
-    }
-
     public void searchResults2(String search) {
         WebElement searchResult = baseFunc.getElement(SEARCH_RESULTS);
         Assert.assertTrue("Displayed message is not correct", searchResult.getText().contains(search));
