@@ -23,10 +23,11 @@ public class MyStepdefs {
     public void chooseSection(String sectionName) {
         mainPage.selectSubMenuSection(sectionName);
     }
-//
-//    @Then("text {string} is displayed")
-//    public void textIsDisplayed(String arg0) {
-//    }
+
+    @Then("text {string} is displayed")
+    public void textIsDisplayed(String text) {
+        mainPage.searchResultsCheck(text);
+    }
 //
 //    @When("user search for {string} in search section")
 //    public void userSearchForInSearchSection(String arg0) {
