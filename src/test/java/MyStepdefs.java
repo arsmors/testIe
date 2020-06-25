@@ -4,10 +4,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.BaseFunc;
 import pages.MainPage;
+import pages.SearchPage;
 
 public class MyStepdefs {
     private BaseFunc baseFunc = new BaseFunc();
     private MainPage mainPage = new MainPage(baseFunc);
+    private SearchPage searchPage = new SearchPage(baseFunc);
 
     @Given("website with link {string}")
     public void websiteWithLink(String url) {
@@ -31,13 +33,13 @@ public class MyStepdefs {
 
     @When("user search for {string} in search section")
     public void userSearchForInSearchSection(String search) {
-        mainPage.enterSearchDetails(search);
+        searchPage.enterSearchDetails(search);
 
     }
 
     @Then("appropriate {string} is displayed in search results")
     public void appropriateIsDisplayedInSearchResults(String search) {
-        mainPage.searchResults2(search);
+        searchPage.searchResults2(search);
         baseFunc.closePage();
     }
 }
