@@ -28,8 +28,10 @@ public class MyStepdefs {
     public void textIsDisplayed(String text) {
         mainPage.searchResultsCheck(text);
     }
-//
-//    @When("user search for {string} in search section")
-//    public void userSearchForInSearchSection(String arg0) {
-//    }
+
+    @When("user search for {string} in search section")
+    public void userSearchForInSearchSection(String search) {
+        mainPage.enterSearchDetails(search);
+
+    }
 }

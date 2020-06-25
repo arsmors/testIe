@@ -5,4 +5,6 @@ Feature: Search for a page
     When user click "Ways to bank" main section
     And choose "Internet banking" section
     Then text "AIB Internet Banking" is displayed
-#    When user search for "addgdgagadg" in search section
+    When user search for "addgdgagadg" in search section
+    Then ads are not displayed on page
+    And appropriate message is displayed for user
