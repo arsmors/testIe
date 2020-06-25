@@ -35,8 +35,9 @@ public class MyStepdefs {
 
     }
 
-    @Then("appropriate message is displayed for {string} search results")
-    public void appropriateMessageIsDisplayedForSearchResults(String search) {
-        mainPage.searchResults(search);
+    @Then("appropriate {string} is displayed in search results")
+    public void appropriateIsDisplayedInSearchResults(String search) {
+        mainPage.searchResults2(search);
+        baseFunc.closePage();
     }
 }
