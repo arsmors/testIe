@@ -34,4 +34,9 @@ public class MyStepdefs {
         mainPage.enterSearchDetails(search);
 
     }
+
+    @Then("appropriate message is displayed for {string} search results")
+    public void appropriateMessageIsDisplayedForSearchResults(String search) {
+        mainPage.searchResults(search);
+    }
 }

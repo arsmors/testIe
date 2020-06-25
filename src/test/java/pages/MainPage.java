@@ -13,6 +13,8 @@ public class MainPage {
     private final By MENU_SUB_SECTIONS = By.xpath("//a[@role=\"menuitem\"]");
     private final By PAGE_TITLE_CHECK = By.xpath("//*[@class=\"title-center\"]");
     private final By SEARCH_BOX = By.xpath("//*[@id=\"site-search-query\"]");
+    private final By SEARCH_RESULTS = By.xpath("//div[@class=\"result-details\"]");
+
 
     public MainPage(BaseFunc basefunc) {
         this.baseFunc = basefunc;
@@ -47,5 +49,11 @@ public class MainPage {
         baseFunc.getElement(SEARCH_BOX).click();
         baseFunc.getElement(SEARCH_BOX).sendKeys(search);
         baseFunc.getElement(SEARCH_BOX).sendKeys(Keys.RETURN);
+    }
+
+    public void searchResults(String search) {
+        String text = "Your search - " + search + " - did not match any documents.";
+        WebElement searchResult = baseFunc.getElement(SEARCH_RESULTS);
+        Assert.assertTrue("Displayed message is not correct", searchResult.getText().contains(text));
     }
 }
