@@ -1,3 +1,5 @@
+package steps;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -37,7 +39,7 @@ public class MyStepdefs {
 
     }
 
-    @Then("appropriate {string} is displayed in search results")
+    @Then("appropriate message {string} is displayed in search results")
     public void appropriateIsDisplayedInSearchResults(String search) {
         searchPage.searchResults2(search);
         baseFunc.closePage();

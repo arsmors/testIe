@@ -104,7 +104,7 @@
                         </goals>
                         <configuration>
                             <projectName>ExecuteAutomation</projectName>
-                            <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
+                            <outputDirectory>${project.build.directory}/</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
                         </configuration>
                     </execution>
